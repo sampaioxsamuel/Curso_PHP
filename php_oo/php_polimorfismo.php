@@ -54,15 +54,28 @@
         function trocarMarcha (){
             echo "desengatar embreagem com a mão e passar a marcha com o pé";
         }
+
+    }
+
+    class Caminhão extends Veiculo {
+        
+        function __construct($placa, $cor){
+            $this -> placa = $placa;
+            $this -> cor = $cor;
+        }
+        
     }
 
     
 
     $carro = new Carro('ABCD1357', 'Preto');
     $moto = new Moto('ASDF2468', 'Vermelho');
+    $caminhao = new Caminhão('QWERTY123', 'Cinza');
 
     $carro -> trocarMarcha();
-    echo "<br>";
+    echo "<hr>";
     $moto -> trocarMarcha();
+    echo "<hr>";
+    $caminhao -> trocarMarcha();
 
 ?>
